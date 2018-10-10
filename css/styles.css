@@ -1,0 +1,126 @@
+html, body {
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* supports checks whether the user browswer supports this */
+@supports (grid-area:auto) {
+    /* .nested {
+        display: grid;
+        grid-template-areas: 
+          "header header header"
+          "nav article box";
+        grid-template-rows: 100px auto;  
+        grid-template-columns: 20% 1fr 15%;
+        height: 100vh;
+    } */
+
+    .nested-main {
+        display: grid;
+        grid-template-areas: 
+          "header header header"
+          "main box box";
+        grid-template-rows: 100px auto;  
+        grid-template-columns: 7% auto auto;
+        height: 100vh;
+    }
+
+    .pageHeader {
+        grid-area: header;
+        color: white;
+        padding: 1em;
+        margin-left: 750px;
+    }
+
+    /* #pageFooter {
+        grid-area: footer;
+    } */
+
+    .main { 
+        grid-area: main;      
+    }
+
+    .main img {
+        width: 500px;
+        position: absolute;
+        bottom: 0;
+        margin-left: 2.5em;
+    }
+
+    /* #mainNav { 
+        grid-area: nav; 
+    } */
+
+    .box{ 
+        grid-area: box; 
+        position: absolute;
+        margin-left: 750px;
+        bottom: 200px;
+    } 
+
+    /* attributes needed to make div elements scroll horizontal */
+    .scroll {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+
+    /* text boxes */
+    .page {
+        top: 0px;
+        width: 500px;
+        background: white;
+        padding: 10px 30px;
+        border: 1px #eee solid;
+        position: absolute;
+    }
+
+    /* 3rd layer of background image */
+    .horizon {
+        z-index: 1;
+        width: 3000px;
+    }
+
+    /* 2nd layer of background image */
+    .middle {
+        z-index: 500;
+        width: 4000px;
+    }
+
+    /* first layer of background image */
+    .front {
+        background: #FFB1B1;
+        z-index: 1000;
+        width: 8000px;
+    }
+
+    /* next screen after intro screen, panels left attribute are readjusted to fit horizontal sequence */
+    #panelTwo {
+        left: 1500px;
+    }
+
+    #panelThree {
+        left: 2450px;
+        width: 700px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .nested { 
+            grid-template-areas: 
+              "header"
+              "article"
+              "ads"
+              "nav"
+              "footer";
+            grid-template-rows: 80px 1fr 70px 1fr 70px;  
+            grid-template-columns: 1fr;
+         }
+
+    }
+
+}
