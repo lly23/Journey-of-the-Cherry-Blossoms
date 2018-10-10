@@ -1,5 +1,6 @@
 html, body {
     font-family: 'Lato', sans-serif;
+    background: #fff;
     overflow-x: hidden;
     margin: 0;
 }
@@ -10,21 +11,26 @@ h1, h2, h3, h4, h5, h6, h7 {
 
 /* supports checks whether the user browswer supports this */
 @supports (grid-area:auto) {
-    .title-page {
+    .layout {
         display: grid;
         grid-template-areas: 
           "header header header"
           "main box box";
         grid-template-rows: 100px auto;  
-        grid-template-columns: 7% auto auto;
-        /* height: 100vh; */
+        grid-template-columns: 50% auto auto;
+        height: 100vh;
     }
 
     .pageHeader {
         grid-area: header;
-        color: white;
+        color: #FFB1B1;
         padding: 1em;
-        margin-left: 750px;
+        text-align: right;
+    }
+
+    #title {
+        position: absolute;
+        bottom: 0;
     }
 
     .main { 
@@ -32,78 +38,17 @@ h1, h2, h3, h4, h5, h6, h7 {
     }
 
     .main img {
-        width: 500px;
-        position: absolute;
-        bottom: 0;
+        width: 75%;
         margin-left: 2.5em;
     }
 
     .box{ 
         grid-area: box; 
-        position: absolute;
-        margin-left: 750px;
-        bottom: 200px;
+        width: 80%;
     } 
 
-    .layout {
-        display: grid;
-        grid-template-areas: 
-          "main main main"
-          "footer footer footer";
-        grid-template-rows: auto 200px;  
-        grid-template-columns: 25% auto 25%;
-        height: 100vh;
-    }
-
-    /* text boxes */
-    /* .page {
-        top: 0px;
-        width: 500px;
-        background: white;
-        padding: 10px 30px;
-        border: 1px #eee solid;
-        position: absolute;
-    } */
-
-    .content {
-        grid-area: main;
-    }
-
-    .pageFooter {
-        grid-area: footer;
-    }
-
-    /* 3rd layer of background image */
-    /* .horizon {
-        z-index: 1;
-        width: 3000px;
-    } */
-
-    /* 2nd layer of background image */
-    /* .middle {
-        z-index: 500;
-        width: 4000px;
-    } */
-
-    /* first layer of background image */
-    .front {
-        background: #FFB1B1;
-        z-index: 1000;
-        width: 8000px;
-    }
-
-    /* next screen after intro screen, panels left attribute are readjusted to fit horizontal sequence */
-    #panelTwo {
-        top: 0px;
-        left: 1500px;
-        width: 1500px;
-        background: white;
-        /* position: absolute; */
-    }
-
-    #panelThree {
-        left: 2450px;
-        width: 700px;
+    #content {
+        margin-top: 100vh;
     }
 
     @media only screen and (max-width: 600px) {

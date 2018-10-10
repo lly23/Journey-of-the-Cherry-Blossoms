@@ -3,6 +3,15 @@ $(document).ready(function() {
     // var parallaxInstance = new Parallax(scene);
 
     // $.jInvertScroll(['.scroll']);
-    $('.timeline').timelify();
-
+    $('.timeline').timelify({
+        // animation types
+        animLeft: "bounceInLeft",
+        animRight: "bounceInRight",
+        animCenter: "bounceInUp",
+        // animation speed
+        animSpeed: 300,
+        // trigger position in pixels
+        offset: 150
+      });
+      
 });

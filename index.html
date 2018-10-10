@@ -12,7 +12,8 @@
         <!-- CSS -->
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/jInvertScroll.css">
-        <link rel="stylesheet" href="css/timelify.css">
+        <link rel="stylesheet" href="js/Simple-Animated-Timeline-Plugin-For-jQuery-Timelify/css/timelify.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -21,81 +22,60 @@
 
 <body>
     <!-- Title Page -->
-    <div class="front scroll">
-            <div id="panelOne">
-                <div id="scene" class="title-page">
-                    <div class="pageHeader"><h1>Journey of the Cherry Blossoms</h1></div>
-                    <div class="main" data-depth="0.2"><img src="img/cherry_blossom_tree.png" alt="Cherry Blossom Tree"></div>
-                    <div class="box" data-depth="0.6">
-                        <h3>Start the journey</h3><p>Scroll down!</p>
-                    </div>
-                </div>
+    <div>
+        <div id="title" class="layout">
+            <div class="pageHeader"><h1>Journey of the Cherry Blossoms</h1></div>
+            <div class="main" data-depth="0.2"><img src="img/cherry_blossom_tree.png" alt="Cherry Blossom Tree"></div>
+            <div class="box" data-depth="0.6">
+                <p>Cherry Blossoms, known as “Sakura” in Japanese, originate from the earths of Japan also representing the country as the national flower. However, every spring, you can find cherry blossom trees coming to a full bloom in many areas of the U.S. Their trek to the other side of the world </p>
             </div>
+        </div>
 
-            <div id="panelTwo" class="layout">
-                <div class="content"></div>
-                <footer class="pageFooter">
-                    <div class="timeline">
-                        <h2>2013</h2>
-                            <ul class="timeline-items">
-                                <li class="is-hidden timeline-item"> <!-- Normal block, positionned to the left -->
-                                    <h3>Title</h3>
-                                    <hr>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cupiditate, delectus deserunt doloribus earum eveniet explicabo fuga iste magni maxime mollitia nemo neque, perferendis quod reprehenderit ut, vel veritatis voluptas?</p>
-                                    <hr>
-                                    <time>January 2013</time>
-                                </li>
-                            </ul>
-                        <h2>2014</h2>
-                            <ul class="timeline-items">
-                                <li class="is-hidden timeline-item inverted"> <!-- Normal block, positionned to the right  -->
-                                    <h3>Title</h3>
-                                    <hr>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias aspernatur consequuntur culpa deserunt ea esse est inventore, ipsa laborum officia, quam quia quidem, rem sunt tempora tenetur ullam voluptatem.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolore harum iure quod ut! Accusamus aspernatur corporis est excepturi facere laudantium nesciunt nihil optio, quaerat quos rerum sunt suscipit voluptate?.</p>
-                                    <hr>
-                                    <time>Mars 2014</time>
-                                </li>
-                    
-                                <li class="is-hidden timeline-item centered"> <!-- Centered block, positionned in the middle -->
-                                <h3>Title</h3>
-                                <hr>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, cupiditate dicta dignissimos dolorem doloribus ducimus eos error ex molestiae nobis odio odit optio placeat quasi repudiandae, unde velit voluptate voluptatem!</p>
-                    
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab commodi consectetur cupiditate ea, eius excepturi expedita illum, incidunt ipsam iste modi obcaecati optio repellendus! Dolore dolores pariatur sint veniam voluptates!</p>
-                    
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequatur distinctio doloremque eos eum eveniet fuga molestiae mollitia nesciunt nisi nobis nostrum, odio omnis pariatur praesentium quibusdam sequi sint voluptates.</p>
-                    
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam, aspernatur commodi consequuntur corporis dicta, distinctio enim eos expedita, id iste laborum maxime nesciunt quaerat sed temporibus veniam vero voluptatem.</p>
-                    
-                                <p><a
-                                href="http://gamejolt.com/games/slender-the-cursed-forest/30950">Link</a>
-                    
-                                </p>
-                                <hr>
-                                <time>Date</time>
-                            </li>
-                        </ul>         
-                    </div>
-                </footer>
-                    <!-- <header id="pageHeader"><h1>Journey of the Cherry Blossoms</h1></header>
-                        <div id="main"></div>
-                        <div id="mainNav">Nav</div>
-                        <div id="box">Box</div>
-                        <div id="timeBoxSecond">in the 1930s</div>
-                      -->
-
-            </div>
-
-                <!-- <div id="panelThree" class="page">
-                        <header id="pageHeader"><h1>Journey of the Cherry Blossoms</h1></header>
-                        <div id="main"><img src="img/cherry_blossom_tree.png" alt="Cherry Blossom Tree"></div>
-                        <div id="mainNav">Nav</div>
-                        <div id="box">Box</div>
-                        <div id="timeBoxThird">in the 190s</div>
-                </div> -->
+        <div id="content">
+            <div class="timeline">
+                <h2>2013</h2>
+                    <ul class="timeline-items">
+                        <li class="is-hidden timeline-item"> <!-- Normal block, positionned to the left -->
+                            <h3>The First To Ask</h3>
+                            <hr>
+                            <p>Eliza Ruhamah Scidmore, a photographer and geographer on the board of the National Geographic Society, returns from her visit to Japan. Upon her arrival she immediately proposes the planting of Cherry Blossoms to government  officials but was turned down.</p>
+                            <hr>
+                            <time>1885</time>
+                        </li>
+                    </ul>
+                <h2>2014</h2>
+                    <ul class="timeline-items">
+                        <li class="is-hidden timeline-item inverted"> <!-- Normal block, positionned to the right  -->
+                            <h3>Title</h3>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias aspernatur consequuntur culpa deserunt ea esse est inventore, ipsa laborum officia, quam quia quidem, rem sunt tempora tenetur ullam voluptatem.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolore harum iure quod ut! Accusamus aspernatur corporis est excepturi facere laudantium nesciunt nihil optio, quaerat quos rerum sunt suscipit voluptate?.</p>
+                            <hr>
+                            <time>Mars 2014</time>
+                        </li>
             
-
+                        <li class="is-hidden timeline-item centered"> <!-- Centered block, positionned in the middle -->
+                        <h3>Title</h3>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, cupiditate dicta dignissimos dolorem doloribus ducimus eos error ex molestiae nobis odio odit optio placeat quasi repudiandae, unde velit voluptate voluptatem!</p>
+            
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab commodi consectetur cupiditate ea, eius excepturi expedita illum, incidunt ipsam iste modi obcaecati optio repellendus! Dolore dolores pariatur sint veniam voluptates!</p>
+            
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequatur distinctio doloremque eos eum eveniet fuga molestiae mollitia nesciunt nisi nobis nostrum, odio omnis pariatur praesentium quibusdam sequi sint voluptates.</p>
+            
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam, aspernatur commodi consequuntur corporis dicta, distinctio enim eos expedita, id iste laborum maxime nesciunt quaerat sed temporibus veniam vero voluptatem.</p>
+            
+                        <p><a
+                        href="http://gamejolt.com/games/slender-the-cursed-forest/30950">Link</a>
+            
+                        </p>
+                        <hr>
+                        <time>Date</time>
+                    </li>
+                </ul>         
+            </div>
+        </div>
+            
     <!-- End of front scroll -->
     </div>
 
