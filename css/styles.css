@@ -10,24 +10,14 @@ h1, h2, h3, h4, h5, h6, h7 {
 
 /* supports checks whether the user browswer supports this */
 @supports (grid-area:auto) {
-    /* .nested {
-        display: grid;
-        grid-template-areas: 
-          "header header header"
-          "nav article box";
-        grid-template-rows: 100px auto;  
-        grid-template-columns: 20% 1fr 15%;
-        height: 100vh;
-    } */
-
-    .nested-main {
+    .title-page {
         display: grid;
         grid-template-areas: 
           "header header header"
           "main box box";
         grid-template-rows: 100px auto;  
         grid-template-columns: 7% auto auto;
-        height: 100vh;
+        /* height: 100vh; */
     }
 
     .pageHeader {
@@ -36,10 +26,6 @@ h1, h2, h3, h4, h5, h6, h7 {
         padding: 1em;
         margin-left: 750px;
     }
-
-    /* #pageFooter {
-        grid-area: footer;
-    } */
 
     .main { 
         grid-area: main;      
@@ -52,10 +38,6 @@ h1, h2, h3, h4, h5, h6, h7 {
         margin-left: 2.5em;
     }
 
-    /* #mainNav { 
-        grid-area: nav; 
-    } */
-
     .box{ 
         grid-area: box; 
         position: absolute;
@@ -63,34 +45,45 @@ h1, h2, h3, h4, h5, h6, h7 {
         bottom: 200px;
     } 
 
-    /* attributes needed to make div elements scroll horizontal */
-    .scroll {
-        position: fixed;
-        bottom: 0;
-        left: 0;
+    .layout {
+        display: grid;
+        grid-template-areas: 
+          "main main main"
+          "footer footer footer";
+        grid-template-rows: auto 200px;  
+        grid-template-columns: 25% auto 25%;
+        height: 100vh;
     }
 
     /* text boxes */
-    .page {
+    /* .page {
         top: 0px;
         width: 500px;
         background: white;
         padding: 10px 30px;
         border: 1px #eee solid;
         position: absolute;
+    } */
+
+    .content {
+        grid-area: main;
+    }
+
+    .pageFooter {
+        grid-area: footer;
     }
 
     /* 3rd layer of background image */
-    .horizon {
+    /* .horizon {
         z-index: 1;
         width: 3000px;
-    }
+    } */
 
     /* 2nd layer of background image */
-    .middle {
+    /* .middle {
         z-index: 500;
         width: 4000px;
-    }
+    } */
 
     /* first layer of background image */
     .front {
@@ -101,7 +94,11 @@ h1, h2, h3, h4, h5, h6, h7 {
 
     /* next screen after intro screen, panels left attribute are readjusted to fit horizontal sequence */
     #panelTwo {
+        top: 0px;
         left: 1500px;
+        width: 1500px;
+        background: white;
+        /* position: absolute; */
     }
 
     #panelThree {

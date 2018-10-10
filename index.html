@@ -12,7 +12,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/jInvertScroll.css">
-        <link rel="stylesheet" href="css/jquery.timelineMe.css">
+        <link rel="stylesheet" href="css/timelify.css">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -21,83 +21,82 @@
 
 <body>
     <!-- Title Page -->
-    <!-- <div id="panelOne" class="scroll">
-        <div class="nested">
-            <header id="pageHeader"><h1>Journey of the Cherry Blossoms</h1></header>
-            <div id="main" data-depth="0.2"><img src="img/cherry_blossom_tree.png" alt="Cherry Blossom Tree"></div>
-            <div id="mainNav" data-depth="0.6">Nav</div>
-            <div id="box" data-depth="0.6">Box</div>
-        </div>
-    </div>
-
-    <div id="panelTwo" class="scroll">
-            <header id="pageHeader"><h1>Journey of the Cherry Blossoms</h1></header>
-            <div id="main"><img src="img/cherry_blossom_tree.png" alt="Cherry Blossom Tree"></div>
-            <div id="mainNav">Nav</div>
-            <div id="box">Box</div>
-        <footer id="pageFooter">Footer</footer> 
-    </div>
-
-    <div id="panelThree" class="scroll">
-            <header id="pageHeader"><h1>Journey of the Cherry Blossoms</h1></header>
-            <div id="main"><img src="img/cherry_blossom_tree.png" alt="Cherry Blossom Tree"></div>
-            <div id="mainNav">Nav</div>
-            <div id="box">Box</div>
-    </div> -->
-    <div class="horizon scroll">
-        <img src="img/cherry_blossom_tree.png" alt="" />
-    </div>
-    <div class="middle scroll">
-        <img src="img/cherry_blossom_tree.png" alt="" />
-    </div>
     <div class="front scroll">
             <div id="panelOne">
-                <div class="nested-main">
+                <div id="scene" class="title-page">
                     <div class="pageHeader"><h1>Journey of the Cherry Blossoms</h1></div>
                     <div class="main" data-depth="0.2"><img src="img/cherry_blossom_tree.png" alt="Cherry Blossom Tree"></div>
-                    <div class="box">
-                        <p></p>
+                    <div class="box" data-depth="0.6">
                         <h3>Start the journey</h3><p>Scroll down!</p>
                     </div>
-                    <!-- <div id="mainNav" data-depth="0.6">Nav</div> -->
-                    <!-- <div id="box" data-depth="0.6">Box</div> -->
-                    <!-- <div id="timeBoxOne">in the 1920s</div> -->
                 </div>
             </div>
 
-            <div id="panelTwo" class="page">
-                    <div id="timeline-container-horizontal" type="text">
-                            <div class="timeline-me-wrapper">
-                                <div class class="timeline-me-track">
-                                    <div class="timeline-me-item">
-                                        <div class="timeline-me-item-wrapper">
-                                            <div class="timeline-me-label-wrapper">
-                                                <div class="timeline-me-label">
-                                                    <div class="timeline-me-picto">
-                
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    <header id="pageHeader"><h1>Journey of the Cherry Blossoms</h1></header>
-                    <div id="main"><img src="img/cherry_blossom_tree.png" alt="Cherry Blossom Tree"></div>
-                    <div id="mainNav">Nav</div>
-                    <div id="box">Box</div>
-                    <div id="timeBoxSecond">in the 1930s</div>
-                    <footer id="pageFooter">Footer</footer> 
+            <div id="panelTwo" class="layout">
+                <div class="content"></div>
+                <footer class="pageFooter">
+                    <div class="timeline">
+                        <h2>2013</h2>
+                            <ul class="timeline-items">
+                                <li class="is-hidden timeline-item"> <!-- Normal block, positionned to the left -->
+                                    <h3>Title</h3>
+                                    <hr>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cupiditate, delectus deserunt doloribus earum eveniet explicabo fuga iste magni maxime mollitia nemo neque, perferendis quod reprehenderit ut, vel veritatis voluptas?</p>
+                                    <hr>
+                                    <time>January 2013</time>
+                                </li>
+                            </ul>
+                        <h2>2014</h2>
+                            <ul class="timeline-items">
+                                <li class="is-hidden timeline-item inverted"> <!-- Normal block, positionned to the right  -->
+                                    <h3>Title</h3>
+                                    <hr>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias aspernatur consequuntur culpa deserunt ea esse est inventore, ipsa laborum officia, quam quia quidem, rem sunt tempora tenetur ullam voluptatem.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolore harum iure quod ut! Accusamus aspernatur corporis est excepturi facere laudantium nesciunt nihil optio, quaerat quos rerum sunt suscipit voluptate?.</p>
+                                    <hr>
+                                    <time>Mars 2014</time>
+                                </li>
+                    
+                                <li class="is-hidden timeline-item centered"> <!-- Centered block, positionned in the middle -->
+                                <h3>Title</h3>
+                                <hr>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, cupiditate dicta dignissimos dolorem doloribus ducimus eos error ex molestiae nobis odio odit optio placeat quasi repudiandae, unde velit voluptate voluptatem!</p>
+                    
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab commodi consectetur cupiditate ea, eius excepturi expedita illum, incidunt ipsam iste modi obcaecati optio repellendus! Dolore dolores pariatur sint veniam voluptates!</p>
+                    
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequatur distinctio doloremque eos eum eveniet fuga molestiae mollitia nesciunt nisi nobis nostrum, odio omnis pariatur praesentium quibusdam sequi sint voluptates.</p>
+                    
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam, aspernatur commodi consequuntur corporis dicta, distinctio enim eos expedita, id iste laborum maxime nesciunt quaerat sed temporibus veniam vero voluptatem.</p>
+                    
+                                <p><a
+                                href="http://gamejolt.com/games/slender-the-cursed-forest/30950">Link</a>
+                    
+                                </p>
+                                <hr>
+                                <time>Date</time>
+                            </li>
+                        </ul>         
+                    </div>
+                </footer>
+                    <!-- <header id="pageHeader"><h1>Journey of the Cherry Blossoms</h1></header>
+                        <div id="main"></div>
+                        <div id="mainNav">Nav</div>
+                        <div id="box">Box</div>
+                        <div id="timeBoxSecond">in the 1930s</div>
+                      -->
+
             </div>
 
-            <div id="panelThree" class="page">
-                    <header id="pageHeader"><h1>Journey of the Cherry Blossoms</h1></header>
-                    <div id="main"><img src="img/cherry_blossom_tree.png" alt="Cherry Blossom Tree"></div>
-                    <div id="mainNav">Nav</div>
-                    <div id="box">Box</div>
-                    <div id="timeBoxThird">in the 190s</div>
-            </div>
-        </div>
+                <!-- <div id="panelThree" class="page">
+                        <header id="pageHeader"><h1>Journey of the Cherry Blossoms</h1></header>
+                        <div id="main"><img src="img/cherry_blossom_tree.png" alt="Cherry Blossom Tree"></div>
+                        <div id="mainNav">Nav</div>
+                        <div id="box">Box</div>
+                        <div id="timeBoxThird">in the 190s</div>
+                </div> -->
+            
+
+    <!-- End of front scroll -->
     </div>
 
     <!-- JQuery -->
@@ -108,7 +107,7 @@
 
     <!-- JavaScript -->
     <script src="js/jInvertScroll/dist/js/jquery.jInvertScroll.min.js"></script>
-    <script src="js/mickaelr-jquery-timelineMe-b768b43/src/jquery.timelineMe.js"></script>
+    <script src="js/Simple-Animated-Timeline-Plugin-For-jQuery-Timelify/js/jquery.timelify.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="js/script.js"></script>
 </body>
