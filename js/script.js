@@ -26,7 +26,7 @@ $(document).ready(function() {
       } else if ($(window).scrollTop() == topOfTimeline) {
         // $('#title').css('display', 'flex');
         // $('#title').show();
-        $('#content').css('margin-top', '100vh');
+        // $('#content').css('margin-top', '100vh');
       }
     });
 });
