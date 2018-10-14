@@ -1,7 +1,4 @@
 $(document).ready(function() {
-    // jInvert scroll
-    $.jInvertScroll(['.scroll']);
-
     // timelify plugin
     $('.timeline').timelify({
       animLeft: "fadeInLeft",
@@ -12,13 +9,13 @@ $(document).ready(function() {
     });
 
     // sakura drop on title page
-    $('#title').sakura({
-          fallSpeed: 0.5,
-          maxSize: 24, // Maximum petal size
-          minSize: 9, // Minimum petal size
-          newOn: 300,
-          swayAnimations: ['sway-0', 'sway-4', 'sway-5', 'sway-8'] // Swaying animation names
-    });
+    // $('#title').sakura({
+    //       fallSpeed: 0.5,
+    //       maxSize: 24, // Maximum petal size
+    //       minSize: 9, // Minimum petal size
+    //       newOn: 300,
+    //       swayAnimations: ['sway-0', 'sway-4', 'sway-5', 'sway-8'] // Swaying animation names
+    // });
 
     $(window).scroll(function () {
       // fade when scrolling down
