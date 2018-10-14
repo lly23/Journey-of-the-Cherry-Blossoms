@@ -8,18 +8,7 @@ $(document).ready(function() {
       offset: 150
     });
 
-    // sakura drop
-    // $('#title').sakura({
-    //   //blow<a href="https://www.jqueryscript.net/animation/">Animation</a>s: ['blow-soft-left', 'blow-medium-left', 'blow-hard-left', 'blow-soft-right', 'blow-medium-right', 'blow-hard-right'], // Horizontal movement animation names
-    //   className: 'sakura', // Class name to use
-    //   fallSpeed: 1, // Factor for petal fall speed
-    //   maxSize: 14, // Maximum petal size
-    //   minSize: 9, // Minimum petal size
-    //   newOn: 300, // Interval after which a new petal is added
-    //   swayAnimations: ['sway-0', 'sway-1', 'sway-2', 'sway-3', 'sway-4', 'sway-5', 'sway-6', 'sway-7', 'sway-8'] // Swaying animation names
-    // });
-
-    // sakura drop
+    // sakura drop on title page
     $('#title').sakura({
           fallSpeed: 0.5,
           maxSize: 24, // Maximum petal size
@@ -36,6 +25,15 @@ $(document).ready(function() {
       $('#title').css({
           'opacity': ((height - scrollTop) / height)
       });    
+
+      if ($(window).scrollTop() > ($('#title').offset().bottom)) {
+        var scrollTop = $(window).scrollTop();
+        var height = $(window).height() + $('#title').height();
+        console.log('height' + height);
+        $('#intro').css({
+          'opacity': ((height - scrollTop) / height)
+        });    
+      }
 
       //changes color of scrolled date boxes
       if ($(window).scrollTop() > ($('#content').offset().top)) {
