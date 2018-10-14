@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    // jInvert scroll
+    $.jInvertScroll(['.scroll']);
+
     // timelify plugin
     $('.timeline').timelify({
       animLeft: "fadeInLeft",
@@ -25,15 +28,6 @@ $(document).ready(function() {
       $('#title').css({
           'opacity': ((height - scrollTop) / height)
       });    
-
-      if ($(window).scrollTop() > ($('#title').offset().bottom)) {
-        var scrollTop = $(window).scrollTop();
-        var height = $(window).height() + $('#title').height();
-        console.log('height' + height);
-        $('#intro').css({
-          'opacity': ((height - scrollTop) / height)
-        });    
-      }
 
       //changes color of scrolled date boxes
       if ($(window).scrollTop() > ($('#content').offset().top)) {

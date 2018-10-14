@@ -19,8 +19,64 @@ h1, h2, h3, h4, h5, h6, h7 {
     font-size: 1.2em;
 }
 
+/* attributes needed to make div elements scroll horizontal */
+.scroll {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* text boxes */
+.page {
+    /* top: 0px; */
+    /* width: 500px; */
+    background: white;
+    /* padding: 10px 30px; */
+    border: 1px #eee solid;
+    position: absolute;
+}
+
+/* first layer of background image */
+.front {
+    /* background: #FFB1B1; */
+    z-index: 1000;
+    width: 8000px;
+}
+
+/* next screen after intro screen, panels left attribute are readjusted to fit horizontal sequence */
+#intro {
+    left: 1500px;
+}
+
+#content{
+    left: 2450px;
+    width: 700px;
+}
+
+#festival {
+    left: 3800px;
+    width: 700px;
+}
+
 /* supports checks whether the user browswer supports this */
 @supports (grid-area:auto) {
+    #nav {
+        position: fixed;
+    }
+
+    .flex {
+        flex-direction: row;
+    }
+
+    #menu {
+        list-style-type: none;
+    }
+
+    #menu a {
+        text-decoration: none;
+        color: #FFB1B1;
+    }
+
     .layout {
         display: grid;
         grid-template-areas: 
@@ -42,8 +98,8 @@ h1, h2, h3, h4, h5, h6, h7 {
     #title {
         border: 1.5em solid #5b5555;
         background: #FFF;
-        bottom: 0;
-        height: 100vh;
+        /* bottom: 0; */
+        /* height: 100vh; */
     }
 
     .main { 
@@ -139,7 +195,7 @@ h1, h2, h3, h4, h5, h6, h7 {
     } */
 
     #content {
-        width: 100%;
+        /* width: 100%; */
         background: #FFB1B1;
     }
 
@@ -150,34 +206,33 @@ h1, h2, h3, h4, h5, h6, h7 {
     .background {
         width: 100%;
         min-height: 100%;
-        height: 100vh;
         background-size: cover;
         background-position: center center;
         background-attachment: fixed;
+        height: 100vh;
     }
 
-    .layer {
+    /* .layer {
         background-color: rgba(255,177,177, 0.5);
         position: absolute;
         width: 100%;
-        height: 100vh;
-    }
+    } */
 
     #panelOne {
         background-image: url('../img/japan-river.png');
         background-repeat: no-repeat;
     }
 
-    #panelTwo {
+    /* #panelTwo {
         background-image: url('../img/japan-river.png');
         background-repeat: no-repeat; 
     }
 
     #panelThree {
-        /* background-image: url('../img/gift-of-friendship.jpeg');
-        background-repeat: no-repeat; */
+        background-image: url('../img/japan-blossoms.jpg');
+        background-repeat: no-repeat; 
         /* height: 100vh; */
-    }
+    } */
 
     .timeline .timeline-items .timeline-item.changed:after {
         -webkit-transition: all 0.5s ease;
@@ -188,12 +243,8 @@ h1, h2, h3, h4, h5, h6, h7 {
         margin-top: 0!important;
     }
 
-    /* .timeline h2 {
-        margin-top: 1em!important;
-    } */
-
-    .timeline-item img {
-        width: 50%;
+    .timeline-image {
+        width: 25%;
     }
 
     .timeline .timeline-items .timeline-item:nth-of-type(2n+1) {
@@ -212,6 +263,15 @@ h1, h2, h3, h4, h5, h6, h7 {
 
     .timeline-item.inverted::after {
         left: calc(-8.78% - 13px)!important;
+    }
+
+    #festival {
+        height: 100vh;
+    }
+
+    #quiz {
+        display: none;
+        height: 100vh;
     }
 
     @media only screen and (max-width: 600px) {
