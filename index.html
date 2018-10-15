@@ -11,7 +11,6 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="plugins/jQuery-Plugin-For-Sakura-Petals-Falling-Animation-Sakura/jquery-sakura.css">
         <link rel="stylesheet" href="plugins/jquery-quiz-master/dist/jquery.quiz-min.css">
         <link rel="stylesheet" href="plugins/Simple-Animated-Timeline-Plugin-For-jQuery-Timelify/css/timelify.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
@@ -29,7 +28,7 @@
             <a href="#title"><li id="listone">Home</li></a>
             <a href="#intro"><li id="listtwo">Pioneers</li></a>
             <a href="#content"><li id="listthree">Timeline</li></a>
-            <a href="#quiz"><li id="listfour">Quiz</li></a>
+            <a href="#quiz-box"><li id="listfour">Quiz</li></a>
             <a href="#sources"><li id="listfive">Sources</li></a>
         </ul>
     </div>
@@ -37,21 +36,21 @@
     <!-- Title Page -->
     <div id="title" class="layout">
         <div class="pageHeader"><h1>Journey of the Cherry Blossoms</h1></div>
-        <div class="main"><img src="img/cherry_blossom_tree_white.png" alt="Cherry Blossom Tree"></div>
-        <div class="box bigger-text">
+        <div class="main" data-depth="0.2"><img class="thumbnail" src="img/cherry_blossom_tree_white.png" alt="Cherry Blossom Tree"></div>
+        <div class="box bigger-text" data-depth="0.6">
             <p>Every spring, you can find <span class="pink">cherry blossom</span> trees coming to a full bloom in many areas of the U.S. <span class="pink">Cherry Blossoms</span>, known as <span class="pink">“Sakuras"</span> in Japanese, originate from the earths of Japan but came to the United States as a gift of friendship. However, the journey here was a long and hard one.</p>
             <h3><span class="pink">Scroll down</span> to learn more about 
             <br>the <span class="pink">Cherry Blossoms'</span> trek to America!</h3>
             <!-- scroll arrow -->
-            <img id="scroll-down-arrow" src="img/scroll-down.png" alt="arrow to indicate scroll down">
+            <img class="thumbnail" id="scroll-down-arrow" src="img/scroll-down.png" alt="arrow to indicate scroll down">
         </div>
     </div>
 
     <!-- Introductory -->
     <div id="intro" class="intro-layout">
         <div class="head"><h2>The Pioneers</h2></div>
-        <div class="left-pic"><img src="img/david-fairchild.jpg" alt="a picture of David Fairchild"></div>
-        <div class="right-pic"><img src="img/elizah-scidmore.jpg" alt=" a picture of Elizah Scidmore"></div>
+        <div class="left-pic"><img class="thumbnail"  src="img/david-fairchild.jpg" alt="a picture of David Fairchild"></div>
+        <div class="right-pic"><img class="thumbnail"  src="img/elizah-scidmore.jpg" alt=" a picture of Elizah Scidmore"></div>
         <div class="left-main">
             <h3>David Fairchild</h3>
             <p>As a young boy, his father became president of Kansas State Agricultural College. Through that, Fairchild was able to meet and hear from many scientists about their foreign expeditions. Growing up, Fairchild studied botany and eventually moved to Washington, D.C. There he found his dream job with the U.S. Department of Agriculture as a food explorer, traveling the world in search of new crops to introduce to the United States.</p>
@@ -69,14 +68,14 @@
                 <div class="layer">
                     <h2>1885</h2>
                     <ul class="timeline-items">
-                        <li id="one" class="is-hidden timeline-item"> <!-- Normal block, positioned to the left -->
+                        <li id="one" class="is-hidden timeline-item" data-depth="0.2"> <!-- Normal block, positioned to the left -->
                             <p>Eliza Scidmore returns from a visit to Japan. She immediately proposes planting Cherry Blossoms to government officials. She is turned down but continues advocating for the trees.</p>
                         </li>
                     </ul>
 
                     <h2>1906</h2>
                     <ul class="timeline-items">
-                        <li id="two" class="is-hidden timeline-item inverted"> <!-- Normal block, positionned to the right  -->
+                        <li id="two" class="is-hidden timeline-item inverted" data-depth="0.2"> <!-- Normal block, positionned to the right  -->
                             <p>David Fairchild, fueled by curiosity from encountering Sakuras in 1902 and his wife's admiration for the trees, imports 125 flowering cherry trees from the Yokohama Nursery Co. in Japan. He plants them on his land in Chevy Chase and attracts many onlookers.</p>
                         </li>
                     <!-- <li class="timeline-image">
@@ -168,7 +167,7 @@
     <!-- Sources and Credits -->
     <div id="sources" class="layout">
         <div class="pageHeader"><h2>Sources and Credits</h2></div>
-        <div class="source-main bigger-text">
+        <div class="source-main bigger-text" data-depth="0.2">
             <h3 class="dark">Sources</h3>
             <ul>
                 <a href="https://www.nationalgeographic.com/archaeology-and-history/magazine/2018/03-04/cherry-blossoms-come-to-d-c-/" target="_blank"><li>National Geographic</li></a>
@@ -178,14 +177,14 @@
                 <a href="https://www.nytimes.com/paidpost/embassy-of-japan/the-gift-of-cherry-blossoms-honoring-the-friendship-of-two-nations.html" target="_blank"><li>New York Times</li></a>
             </ul>
 
-            <h3 class="dark">Credits</h3>
+            <h3 class="dark">Photo Credits</h3>
             <ul>
                 <a href="https://techflourish.com/categories/tree-clipart-black-and-white-png.html" target="_blank"><li>Tree Clipart</li></a>
                 <a href="https://mbtskoudsalg.com/explore/cherry-blossom-vector-png/" target="_blank"><li>Cherry Blossom Vector</li></a>
                 <a href="http://www.wallpapers13.com/wp-content/uploads/2018/05/Cherry-Tree-Rose-Flowers-Green-River-Kawazu-Town-in-Japan-Shizuoka-Desktop-Wallpaper-HD-for-mobile-phones-and-laptops-HD-2560x1600.jpg" target="_blank"><li>Cherry Blossom Background</li></a>
             </ul>
         </div>  
-        <div class="credits-box"><img src="img/cherry_blossom_tree.png" alt="Cherry Blossom Tree">
+        <div class="credits-box"><img src="img/cherry_blossom_tree.png" data-depth="0.6" alt="Cherry Blossom Tree">
         </div>
     </div>
                 
@@ -197,9 +196,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 
     <!-- JavaScript -->
-    <!-- <script src="plugins/bouncy-navigation-master/js/main.js"></script>
-    <script src="plugins/bouncy-navigation-master/js/modernizr.js"></script> -->
-    <script src="plugins/jQuery-Plugin-For-Sakura-Petals-Falling-Animation-Sakura/jquery-sakura.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="plugins/jquery-quiz-master/dist/jquery.quiz-min.js"></script>
     <script src="plugins/Simple-Animated-Timeline-Plugin-For-jQuery-Timelify/js/jquery.timelify.js"></script>
     <script src="js/script.js"></script>

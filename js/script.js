@@ -8,14 +8,15 @@ $(document).ready(function() {
       offset: 150
     });
 
-    // sakura drop on title page
-    // $('#title').sakura({
-    //       fallSpeed: 0.5,
-    //       maxSize: 24, // Maximum petal size
-    //       minSize: 9, // Minimum petal size
-    //       newOn: 300,
-    //       swayAnimations: ['sway-0', 'sway-4', 'sway-5', 'sway-8'] // Swaying animation names
-    // });
+    // parallax.js effect
+    var title = document.getElementById('title');
+    var parallaxInstance = new Parallax(title);
+
+    var content = document.getElementById('content');
+    var parallaxInstance = new Parallax(content);
+
+    var sources = document.getElementById('sources');
+    var parallaxInstance = new Parallax(sources);
 
     // made a navigation menu that will take user to a certain section
     $('#listone').click(function() {
@@ -108,7 +109,7 @@ $(document).ready(function() {
         $('#listfive').removeClass('active');
       } 
 
-      if ($(window).scrollTop() >= $('#quiz').offset().top) {
+      if ($(window).scrollTop() >= $('#quiz-box').offset().top) {
         $('#listfour').addClass('active');
         $('#listone').removeClass('active');
         $('#listtwo').removeClass('active');
@@ -187,16 +188,6 @@ $(document).ready(function() {
         $('#nine').removeClass('changed');
       }
     });
-
-    if ($(window).scrollTop() >= $('#sources').offset().top) {
-      // $('#sources').sakura({
-      //   fallSpeed: 0.5,
-      //   maxSize: 24, // Maximum petal size
-      //   minSize: 9, // Minimum petal size
-      //   newOn: 300,
-      //   swayAnimations: ['sway-0', 'sway-4', 'sway-5', 'sway-8'] // Swaying animation names
-      // });
-    }
 
     // quiz plugin
     $('#quiz').quiz({
