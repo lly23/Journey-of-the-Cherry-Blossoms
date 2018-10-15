@@ -1,4 +1,15 @@
 $(document).ready(function() {
+    //sakura petals dropping plugin
+    $('#intro').sakura({
+      fallSpeed: 0.3,
+      newOn: 500,
+      swayAnimations: ['sway-0', 'sway-1', 'sway-2', 'sway-3', 'sway-4', 'sway-5', 'sway-6', 'sway-7', 'sway-8']
+    });
+
+    if ($(window).scrollTop() >= $('#intro').offset().top) {
+      $('#intro').sakura('stop');
+    }
+
     // timelify plugin
     $('.timeline').timelify({
       animLeft: "fadeInLeft",
@@ -9,58 +20,69 @@ $(document).ready(function() {
     });
 
     // made a navigation menu that will take user to a certain section
-    $('#listone').click(function() {
-      $('#listone').addClass('active');
-      $('#listtwo').removeClass('active');
-      $('#listthree').removeClass('active');
-      $('#listfour').removeClass('active');
-      $('#listfive').removeClass('active');
-      $('#listsix').removeClass('active');
+    $('#listone').click(function(e) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $("#title").offset().top
+      }, 500, function() {
+        $('#listtwo').removeClass('active');
+        $('#listthree').removeClass('active');
+        $('#listfour').removeClass('active');
+        $('#listfive').removeClass('active');
+        $('#listone').addClass('active');
+      });
     });
 
-    $('#listtwo').click(function() {
-      $('#listtwo').addClass('active');
-      $('#listone').removeClass('active');
-      $('#listthree').removeClass('active');
-      $('#listfour').removeClass('active');
-      $('#listfive').removeClass('active');
-      $('#listsix').removeClass('active');
+    $('#listtwo').click(function(e) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $("#intro").offset().top
+      }, 500, function() {
+        $('#listone').removeClass('active');
+        $('#listthree').removeClass('active');
+        $('#listfour').removeClass('active');
+        $('#listfive').removeClass('active');
+        $('#listtwo').addClass('active');
+      });
     });
 
-    $('#listthree').click(function() {
-      $('#listthree').addClass('active');
-      $('#listone').removeClass('active');
-      $('#listtwo').removeClass('active');
-      $('#listfour').removeClass('active');
-      $('#listfive').removeClass('active');
-      $('#listsix').removeClass('active');
+    $('#listthree').click(function(e) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $("#content").offset().top - 50
+      }, 500, function() {
+        $('#listone').removeClass('active');
+        $('#listtwo').removeClass('active');
+        $('#listfour').removeClass('active');
+        $('#listfive').removeClass('active');
+        $('#listthree').addClass('active');
+      });
     });
 
-    $('#listfour').click(function() {
-      $('#listfour').addClass('active');
-      $('#listone').removeClass('active');
-      $('#listtwo').removeClass('active');
-      $('#listthree').removeClass('active');
-      $('#listfive').removeClass('active');
-      $('#listsix').removeClass('active');
+    $('#listfour').click(function(e) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $("#quiz-box").offset().top - 100
+      }, 500, function() {
+        $('#listone').removeClass('active');
+        $('#listtwo').removeClass('active');
+        $('#listthree').removeClass('active');
+        $('#listfive').removeClass('active');
+        $('#listfour').addClass('active');
+      });
     });
 
-    $('#listfive').click(function() {
-      $('#listfive').addClass('active');
-      $('#listone').removeClass('active');
-      $('#listtwo').removeClass('active');
-      $('#listthree').removeClass('active');
-      $('#listfour').removeClass('active');
-      $('#listsix').removeClass('active');
-    });
-
-    $('#listsix').click(function() {
-      $('#listsix').addClass('active');
-      $('#listone').removeClass('active');
-      $('#listtwo').removeClass('active');
-      $('#listthree').removeClass('active');
-      $('#listfour').removeClass('active');
-      $('#listfive').removeClass('active');
+    $('#listfive').click(function(e) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $("#sources").offset().top
+      }, 500, function() {
+        $('#listfive').addClass('active');
+        $('#listone').removeClass('active');
+        $('#listtwo').removeClass('active');
+        $('#listthree').removeClass('active');
+        $('#listfour').removeClass('active');
+      });
     });
 
     $(window).scroll(function() {
@@ -91,7 +113,7 @@ $(document).ready(function() {
         $('#nav').css({'background': '#FFF', 'width': '100%'});
       } 
 
-      if ($(window).scrollTop() >= $('#content').offset().top) {
+      if ($(window).scrollTop() >= $('#content').offset().top - 50) {
         $('#listthree').addClass('active');
         $('#listone').removeClass('active');
         $('#listtwo').removeClass('active');
@@ -99,7 +121,7 @@ $(document).ready(function() {
         $('#listfive').removeClass('active');
       } 
 
-      if ($(window).scrollTop() >= $('#quiz-box').offset().top) {
+      if ($(window).scrollTop() >= $('#quiz-box').offset().top - 100) {
         $('#listfour').addClass('active');
         $('#listone').removeClass('active');
         $('#listtwo').removeClass('active');
