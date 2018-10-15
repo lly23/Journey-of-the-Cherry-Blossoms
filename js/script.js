@@ -24,6 +24,7 @@ $(document).ready(function() {
       $('#listthree').removeClass('active');
       $('#listfour').removeClass('active');
       $('#listfive').removeClass('active');
+      $('#listsix').removeClass('active');
     });
 
     $('#listtwo').click(function() {
@@ -32,6 +33,7 @@ $(document).ready(function() {
       $('#listthree').removeClass('active');
       $('#listfour').removeClass('active');
       $('#listfive').removeClass('active');
+      $('#listsix').removeClass('active');
     });
 
     $('#listthree').click(function() {
@@ -40,6 +42,7 @@ $(document).ready(function() {
       $('#listtwo').removeClass('active');
       $('#listfour').removeClass('active');
       $('#listfive').removeClass('active');
+      $('#listsix').removeClass('active');
     });
 
     $('#listfour').click(function() {
@@ -48,6 +51,7 @@ $(document).ready(function() {
       $('#listtwo').removeClass('active');
       $('#listthree').removeClass('active');
       $('#listfive').removeClass('active');
+      $('#listsix').removeClass('active');
     });
 
     $('#listfive').click(function() {
@@ -56,6 +60,16 @@ $(document).ready(function() {
       $('#listtwo').removeClass('active');
       $('#listthree').removeClass('active');
       $('#listfour').removeClass('active');
+      $('#listsix').removeClass('active');
+    });
+
+    $('#listsix').click(function() {
+      $('#listsix').addClass('active');
+      $('#listone').removeClass('active');
+      $('#listtwo').removeClass('active');
+      $('#listthree').removeClass('active');
+      $('#listfour').removeClass('active');
+      $('#listfive').removeClass('active');
     });
 
     $(window).scroll(function() {
@@ -71,13 +85,14 @@ $(document).ready(function() {
           'opacity': ((height - scrollTop) / height)
       });    
 
+      // when scrolling, active sections will be highlighted with active class properties
       if ($(window).scrollTop() <= $('#title').height()) {
         $('#listone').addClass('active');
         $('#listtwo').removeClass('active');
         $('#listthree').removeClass('active');
         $('#listfour').removeClass('active');
         $('#listfive').removeClass('active');
-      }
+      } 
 
       if ($(window).scrollTop() >= $('#intro').offset().top) {
         $('#listtwo').addClass('active');
@@ -89,7 +104,7 @@ $(document).ready(function() {
         //   scrollTop: $('#intro').offset().top
         // }, 1000);
         // $('#title').sakura('stop');
-      }
+      } 
 
       if ($(window).scrollTop() >= $('#content').offset().top) {
         $('#listthree').addClass('active');
@@ -97,9 +112,9 @@ $(document).ready(function() {
         $('#listtwo').removeClass('active');
         $('#listfour').removeClass('active');
         $('#listfive').removeClass('active');
-      }
+      } 
 
-      if ($(window).scrollTop() >= $('#festival').offset().top) {
+      if ($(window).scrollTop() >= $('#quiz').offset().top) {
         $('#listfour').addClass('active');
         $('#listone').removeClass('active');
         $('#listtwo').removeClass('active');
@@ -107,7 +122,7 @@ $(document).ready(function() {
         $('#listfive').removeClass('active');
       }
 
-      if ($(window).scrollTop() >= $('#quiz').offset().top) {
+      if ($(window).scrollTop() >= $('#sources').offset().top) {
         $('#listfive').addClass('active');
         $('#listone').removeClass('active');
         $('#listtwo').removeClass('active');
@@ -115,20 +130,68 @@ $(document).ready(function() {
         $('#listfour').removeClass('active');
       }
 
-      //changes color of scrolled date boxes
-      // if ($(window).scrollTop() > ($('#content').offset().top)) {
-      //   console.log('window: ' + $(window).scrollTop());
-      //   console.log('panel one: ' + $('#content').offset().top);
-      //   $('#one').addClass('changed');
-      // } 
+      //changes color of active date boxes
+      if ($(window).scrollTop() > ($('#content').offset().top)) {
+        $('#one').addClass('changed');
+      } else {
+        $('#one').removeClass('changed');
+      } 
 
-      // $('#one').fadeOut('slow', 'linear');
+      if ($(window).scrollTop() >= $('#one').offset().top) {
+        $('#one').removeClass('changed');
+        $('#two').addClass('changed');
+      } else {
+        $('#two').removeClass('changed');
+      }
 
-      // if ($(window).scrollTop() > ($('#one').height()) / 2) {
-      //   console.log('window: ' + $(window).scrollTop());
-      //   console.log('half of panel one: ' + $('#one').height());
-      //   $('#two').addClass('changed');
-      // }
+      if ($(window).scrollTop() >= $('#two').offset().top) {
+        $('#two').removeClass('changed');
+        $('#three').addClass('changed');
+      } else {
+        $('#three').removeClass('changed');
+      }
+
+      if ($(window).scrollTop() >= $('#three').offset().top) {
+        $('#three').removeClass('changed');
+        $('#four').addClass('changed');
+      } else {
+        $('#four').removeClass('changed');
+      }
+
+      if ($(window).scrollTop() >= $('#four').offset().top) {
+        $('#four').removeClass('changed');
+        $('#five').addClass('changed');
+      } else {
+        $('#five').removeClass('changed');
+      }
+
+      if ($(window).scrollTop() >= $('#five').offset().top) {
+        $('#five').removeClass('changed');
+        $('#six').addClass('changed');
+      } else {
+        $('#six').removeClass('changed');
+      }
+
+      if ($(window).scrollTop() >= $('#six').offset().top) {
+        $('#six').removeClass('changed');
+        $('#seven').addClass('changed');
+      } else {
+        $('#seven').removeClass('changed');
+      }
+
+      if ($(window).scrollTop() >= $('#seven').offset().top) {
+        $('#seven').removeClass('changed');
+        $('#eight').addClass('changed');
+      } else {
+        $('#eight').removeClass('changed');
+      }
+
+      if ($(window).scrollTop() >= $('#eight').offset().top) {
+        $('#eight').removeClass('changed');
+        $('#nine').addClass('changed');
+      } else {
+        $('#nine').removeClass('changed');
+      }
 
     });
 
@@ -144,56 +207,56 @@ $(document).ready(function() {
           'options': [
             'David Fairchild',
             'Elizah Scidmore',
-            'Answer 3',
-            'Answer 4'
+            'Helen Taft',
+            'Jokichi Takamine',
           ],
           'correctIndex': 1,
           'correctResponse': 'Nice job! Elizah went straight to U.S government officials after her trip from Japan in 1885.',
-          'incorrectResponse': 'Wrong answer. Try again.'
+          'incorrectResponse': 'Wrong answer.'
         },
         {
-          'q': 'A smaple question?',
+          'q': 'True or False: On Jan. 6, 1910, 2,000 Japanese cherry trees that were imported into Washington were infested with pests.',
           'options': [
-            'Answer 1',
-            'Answer 2'
+            'True',
+            'False'
           ],
-          'correctIndex': 1,
-          'correctResponse': 'Custom correct response.',
-          'incorrectResponse': 'Custom incorrect response.'
+          'correctIndex': 0,
+          'correctResponse': 'Correct!',
+          'incorrectResponse': 'Wrong answer.'
         },
         {
-          'q': 'A smaple question?',
+          'q': 'Which year was the year of the first National Cherry Blossom Festival?',
           'options': [
-            'Answer 1',
-            'Answer 2',
-            'Answer 3',
-            'Answer 4'
-          ],
-          'correctIndex': 2,
-          'correctResponse': 'Custom correct response.',
-          'incorrectResponse': 'Custom incorrect response.'
-        },
-        {
-          'q': 'A smaple question?',
-          'options': [
-            'Answer 1',
-            'Answer 2'
-          ],
-          'correctIndex': 1,
-          'correctResponse': 'Custom correct response.',
-          'incorrectResponse': 'Custom incorrect response.'
-        },
-        {
-          'q': 'A smaple question?',
-          'options': [
-            'Answer 1',
-            'Answer 2',
-            'Answer 3',
-            'Answer 4'
+            '1920',
+            '1925',
+            '1934',
+            '1935',
           ],
           'correctIndex': 3,
-          'correctResponse': 'Custom correct response.',
-          'incorrectResponse': 'Custom incorrect response.'
+          'correctResponse': 'Correct!',
+          'incorrectResponse': 'Wrong answer.'
+        },
+        {
+          'q': 'True or False: When Scidmore was little, she wanted to become a food explorer.',
+          'options': [
+            'True',
+            'False'
+          ],
+          'correctIndex': 1,
+          'correctResponse': 'Correct! David Fairchild was the one who wanted to become a botanist/food explorer. Elizah Scidmore became a geographer and journalist.',
+          'incorrectResponse': 'Wrong answer.'
+        },
+        {
+          'q': 'What are Cherry Blossoms called in Japanese?',
+          'options': [
+            'Fuji',
+            'Tsubaki',
+            'Sakuras',
+            'Hibiscus'
+          ],
+          'correctIndex': 2,
+          'correctResponse': 'Correct! Cherry Blossoms are called Sakuras in Japanese.',
+          'incorrectResponse': 'Wrong answer.'
         }
       ]
     });

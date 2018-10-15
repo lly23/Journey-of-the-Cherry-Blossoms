@@ -135,10 +135,6 @@ h1, h2, h3, h4, h5, h6, h7 {
         grid-area: right-pic;
     }
 
-    .left-pic img, .right-pic img {
-        border: 1em solid #fff;
-    }
-
     .left-pic, .right-pic {
         text-align: center;
     }
@@ -233,18 +229,28 @@ h1, h2, h3, h4, h5, h6, h7 {
         left: calc(-8.78% - 13px)!important;
     }
 
-    #festival {
-        height: 100vh;
-    }
-
     #quiz {
         width: 80%;
         border: 1.5em solid #5b5555;
+        border-radius: 1em;
         height: 100vh;
+    }
+
+    .question-container, .active-question {
+        padding: 1em;
     }
 
     #sources {
         height: 100vh;
+    }
+
+    #sources a {
+        text-decoration: none;
+        color: #5b5555;
+    }
+
+    #sources a:hover {
+        color: #FF7171;
     }
 
     @media only screen and (max-width: 600px) {
