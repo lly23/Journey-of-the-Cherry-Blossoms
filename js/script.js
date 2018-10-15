@@ -188,6 +188,16 @@ $(document).ready(function() {
       }
     });
 
+    if ($(window).scrollTop() >= $('#sources').offset().top) {
+      // $('#sources').sakura({
+      //   fallSpeed: 0.5,
+      //   maxSize: 24, // Maximum petal size
+      //   minSize: 9, // Minimum petal size
+      //   newOn: 300,
+      //   swayAnimations: ['sway-0', 'sway-4', 'sway-5', 'sway-8'] // Swaying animation names
+      // });
+    }
+
     // quiz plugin
     $('#quiz').quiz({
       resultsScreen: '#results-screen',

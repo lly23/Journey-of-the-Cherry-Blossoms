@@ -1,3 +1,4 @@
+/* Universal properties */
 html, body {
     font-family: 'Roboto', sans-serif;
     color: #5b5555;
@@ -20,14 +21,26 @@ h1, h2, h3, h4, h5, h6, h7 {
     color: #FF7171;
 }
 
+.dark {
+    color: #000;
+}
+
 .bigger-text {
     font-size: 1.2em;
 }
 
-.cd-section img {
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* .cd-section img {
     width: 4em;
     text-align: left;
-}
+} */
 
 /* supports checks whether the user browswer supports this */
 @supports (grid-area:auto) {
@@ -42,7 +55,6 @@ h1, h2, h3, h4, h5, h6, h7 {
         flex-direction: row;
         padding-left: 0;
         margin-top: 0;
-        list-style-type: none;
     }
 
     #menu li {
@@ -51,7 +63,6 @@ h1, h2, h3, h4, h5, h6, h7 {
     }
 
     #menu a {
-        text-decoration: none;
         color: #5b5555;
     }
 
@@ -60,6 +71,7 @@ h1, h2, h3, h4, h5, h6, h7 {
         color: #FF7171!important;
     }
 
+    /* Grid layout for title page and source page */
     .layout {
         display: grid;
         grid-template-areas: 
@@ -69,6 +81,7 @@ h1, h2, h3, h4, h5, h6, h7 {
         grid-template-columns: 50% auto auto;
     }
 
+    /* Title page and source page properties and grid elements */
     #title {
         /* border: 1.5em solid #5b5555; */
         background: rgb(255, 177, 177);
@@ -93,14 +106,10 @@ h1, h2, h3, h4, h5, h6, h7 {
     .source-main {
         grid-area: main;
         bottom: 0;
+        margin-left: 4em;
     }
 
-    .festival-main {
-        grid-area: main;  
-        bottom: 0;    
-    }
-
-    .scource-main img, .main img {
+    .main img {
         width: 85%;
         margin-left: 2em;
     }
@@ -114,6 +123,17 @@ h1, h2, h3, h4, h5, h6, h7 {
         text-align: right;
     } 
 
+    .credits-box {
+        grid-area: box; 
+        width: 90%;
+    }
+
+    .credits-box img {
+        width: 55%;
+        margin-left: 10em;
+    }
+
+    /* Grid layout for intro page */
     .intro-layout {
         display: grid;
         grid-template-areas: 
@@ -124,6 +144,7 @@ h1, h2, h3, h4, h5, h6, h7 {
         grid-template-columns: 25% 25% 25% 25%;
     }
 
+    /* Intro Page properties and grid elements */
     #intro {
         color: #5b5555;
         background: #FFF;
@@ -179,6 +200,7 @@ h1, h2, h3, h4, h5, h6, h7 {
         50% { top: 80% }
     } */
 
+    /* Parallax effect on timeline */
     .background {
         width: 100%;
         height: 100vh;
@@ -194,15 +216,16 @@ h1, h2, h3, h4, h5, h6, h7 {
         height: 100vh;
     }
 
-    #panelOne {
-        background-image: url('../img/japan-blossoms-grayscale.png');
-        background-repeat: no-repeat;
-    }
-
     .layer, .background, #panelTwo {
         height: 130vh;
     }
 
+    /* Background changing in timeline  */
+    #panelOne {
+        background-image: url('../img/japan-blossoms-grayscale.png');
+        background-repeat: no-repeat;
+    }
+    
     #panelTwo {
         background-image: url('../img/japan-blossoms-6-colors.png');
         background-repeat: no-repeat; 
@@ -219,6 +242,7 @@ h1, h2, h3, h4, h5, h6, h7 {
         background-repeat: no-repeat; 
     }
 
+    /* Timeline properties (some overriding plugin css with !important) */
     .timeline .timeline-items .timeline-item.changed:after {
         -webkit-transition: all 0.5s ease;
         background: #FF7171!important;
@@ -250,25 +274,31 @@ h1, h2, h3, h4, h5, h6, h7 {
         left: calc(-8.78% - 13px)!important;
     }
 
+    /* Quiz Page */
     #quiz {
         width: 100%;
         height: 100vh;
     }
 
-    .quiz-box {
+    #quiz-box {
         width: 90%;
-        height: 85%;
+        height: 80vh;
+        margin-top: 5em;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 5em;
         border: 1.5em solid #5b5555;
         border-radius: 1em;
+    }
+
+    #quiz-results, .question {
+        text-align: center;
     }
 
     .question-container, .active-question {
         padding: 1em;
     }
 
+    /* Sources Page */
     #sources {
         height: 100vh;
     }
