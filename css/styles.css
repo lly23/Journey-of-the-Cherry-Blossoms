@@ -1,5 +1,6 @@
 html, body {
     font-family: 'Roboto', sans-serif;
+    color: #5b5555;
     min-height:100%;
     min-width:100%;
     height: 100%;
@@ -19,30 +20,45 @@ h1, h2, h3, h4, h5, h6, h7 {
     font-size: 1.2em;
 }
 
+.cd-section img {
+    width: 4em;
+    text-align: left;
+}
+
 /* supports checks whether the user browswer supports this */
 @supports (grid-area:auto) {
     #nav {
         position: fixed;
         height: 10%;
-    }
-
-    .flex {
-        flex-direction: row;
+        z-index: 1000;
     }
 
     #menu {
+        display: flex;
+        flex-direction: row;
+        padding-left: 0;
+        margin-top: 0;
         list-style-type: none;
+    }
+
+    #menu li {
+        padding: 1em;
+        background: rgba(91,85,85);
     }
 
     #menu a {
         text-decoration: none;
-        color: #FFB1B1;
+        color: #fff;
+    }
+
+    .active {
+        background: #FFB1B1!important;
     }
 
     .layout {
         display: grid;
         grid-template-areas: 
-          "main header header"
+          "header header header"
           "main box box";
         grid-template-rows: 200px auto;  
         grid-template-columns: 50% auto auto;
@@ -59,11 +75,8 @@ h1, h2, h3, h4, h5, h6, h7 {
         font-size: 2em;
         grid-area: header;
         color: #FFB1B1;
-        padding: 1em;
-        text-align: right; */
-        /* margin-right: 3em;
-        /* position: absolute;
-        left: 17em; */
+        text-align: right;
+        margin-right: 1.5em;
     }
 
     .main { 
@@ -81,11 +94,9 @@ h1, h2, h3, h4, h5, h6, h7 {
         grid-area: box; 
         margin-top: auto;
         margin-bottom: auto;
-        width: 80%;
+        width: 90%;
+        margin-right: 1.5em;
         text-align: right;
-        /* position: absolute;
-        top: 15em;
-        left: 31em; */
     } 
 
     .intro-layout {
@@ -99,15 +110,16 @@ h1, h2, h3, h4, h5, h6, h7 {
     }
 
     #intro {
-        background: #FFB1B1;
+        color: #5b5555;
+        background: #FFF;
         height: 100vh;
-    }
+    }    
 
     .head {
         font-size: 2em;
         grid-area: head;
-        color: #FFF;
         text-align: center;
+        color: #FFB1B1;
     }
 
     .left-pic {
@@ -128,16 +140,14 @@ h1, h2, h3, h4, h5, h6, h7 {
 
     .left-main {
         grid-area: left;
-        color: #FFF;
     }
 
     .right-main {
         grid-area: right;
-        color: #FFF;
     }
 
     .left-main, .right-main {
-        width: 80%;
+        width: 75%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -149,11 +159,6 @@ h1, h2, h3, h4, h5, h6, h7 {
     /* scroll arrow indicator */
     #scroll-down-arrow {
         width: 4em;
-        -webkit-transform: rotate(-90deg);
-        -moz-transform: rotate(-90deg);
-        -o-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-        transform: rotate(-90deg);
         /* animation: floating 1.5s linear infinite;
         top: 50%; */
     }
@@ -163,22 +168,12 @@ h1, h2, h3, h4, h5, h6, h7 {
         50% { top: 80% }
     } */
 
-    #content {
-        /* width: 100%; */
-        background: #FFB1B1;
-    }
-
-    #intro {
-        height: 100vh;
-    }
-
     .background {
         width: 100%;
-        min-height: 100%;
+        height: 100vh;
         background-size: cover;
         background-position: center center;
         background-attachment: fixed;
-        height: 100vh;
     }
 
     /* .layer {
@@ -192,7 +187,7 @@ h1, h2, h3, h4, h5, h6, h7 {
         background-repeat: no-repeat;
     }
 
-    /* #panelTwo {
+    #panelTwo {
         background-image: url('../img/japan-river.png');
         background-repeat: no-repeat; 
     }
@@ -200,8 +195,7 @@ h1, h2, h3, h4, h5, h6, h7 {
     #panelThree {
         background-image: url('../img/japan-blossoms.jpg');
         background-repeat: no-repeat; 
-        /* height: 100vh; */
-    } */
+    } 
 
     .timeline .timeline-items .timeline-item.changed:after {
         -webkit-transition: all 0.5s ease;
@@ -217,7 +211,7 @@ h1, h2, h3, h4, h5, h6, h7 {
     }
 
     .timeline .timeline-items .timeline-item:nth-of-type(2n+1) {
-        background-color: rgba(75, 74, 74, 0.8)!important;
+        background-color: rgb(75, 74, 74)!important;
         left: 2%;
     }
 
@@ -246,13 +240,25 @@ h1, h2, h3, h4, h5, h6, h7 {
         .layout { 
             grid-template-areas: 
               "header"
-              "article"
-              "ads"
-              "nav"
-              "footer";
-            grid-template-rows: 80px 1fr 70px 1fr 70px;  
+              "main"
+              "box";
+            grid-template-rows: 80px auto auto;  
             grid-template-columns: 1fr;
          }
+
+         .intro-layout {
+            display: grid;
+            grid-template-areas: 
+              "head"
+              "left-pic"
+              "left"
+              "right-pic"
+              "right";
+            grid-template-rows: 80px auto auto auto auto;  
+            grid-template-columns: 1fr;
+        }
+
+
 
     }
 

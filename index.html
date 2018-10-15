@@ -11,6 +11,8 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="css/styles.css">
+        <!-- <link rel="stylesheet" href="plugins/bouncy-navigation-master/css/style.css">
+        <link rel="stylesheet" href="plugins/bouncy-navigation-master/css/reset.css"> -->
         <link rel="stylesheet" href="plugins/jQuery-Plugin-For-Sakura-Petals-Falling-Animation-Sakura/jquery-sakura.css">
         <link rel="stylesheet" href="plugins/jquery-quiz-master/dist/jquery.quiz-min.css">
         <link rel="stylesheet" href="plugins/Simple-Animated-Timeline-Plugin-For-jQuery-Timelify/css/timelify.css">
@@ -23,13 +25,35 @@
     
     
 <body>
+    <div id="nav">
+        <ul id="menu">
+            <a href="#title"><li id="listone">Title</li></a>
+            <a href="#intro"><li id="listtwo">Intro</li></a>
+            <a href="#content"><li id="listthree">Timeline</li></a>
+            <a href="#festival"><li id="listfour">Festival</li></a>
+            <a href="#quiz"><li id="listfive">Quiz</li></a>
+        </ul>
+    </div>
+    <!-- <section class="cd-section">
+        <a class="cd-bouncy-nav-trigger" href="#0"><img src="img/sakura3.png" alt="sakura flower petals"></a>
+    </section> 
+    <div class="cd-bouncy-nav-modal">
+            <nav>
+               <ul class="cd-bouncy-nav">
+                  <li><a href="#0">Item 1</a></li>
+                  <!-- other list items here -->
+               </ul>
+            </nav>
+            <a href="#0" class="cd-close">Close modal</a>
+         </div> -->
+
     <!-- Title Page -->
     <div id="title" class="layout">
         <div class="pageHeader"><h1>Journey of the Cherry Blossoms</h1></div>
         <div class="main"><img src="img/cherry_blossom_tree.png" alt="Cherry Blossom Tree"></div>
         <div class="box bigger-text">
             <p>Every spring, you can find <span class="pink">cherry blossom</span> trees coming to a full bloom in many areas of the U.S. <span class="pink">Cherry Blossoms</span>, known as <span class="pink">“Sakuras"</span> in Japanese, originate from the earths of Japan but came to the United States as a gift of friendship. However, the journey here was a long and hard one.</p>
-            <h3><span class="pink">Scroll right</span> to learn more about 
+            <h3><span class="pink">Scroll down</span> to learn more about 
             <br>the <span class="pink">Cherry Blossoms'</span> trek to America!</h3>
             <!-- scroll arrow -->
             <img id="scroll-down-arrow" src="img/scroll-down.png" alt="arrow to indicate scroll down">
@@ -55,11 +79,10 @@
     <div id="content">
         <div class="timeline">
             <div class="background" id="panelOne">
-                <div class="layer">
                     <h2>1885</h2>
                     <ul class="timeline-items">
                         <li id="one" class="is-hidden timeline-item"> <!-- Normal block, positioned to the left -->
-                            <p>Eliza Scidmore returns from her visit to Japan. Upon her arrival she immediately proposes the planting of Cherry Blossoms to government officials.</p>
+                            <p>Eliza Scidmore returns from her visit to Japan. Upon her arrival she immediately proposes the planting of Cherry Blossoms to government officials. She is turned down but continues lobbying for 24 years.</p>
                         </li>
                     </ul>
 
@@ -72,7 +95,10 @@
                         <img src="img/yoshino-sketched.svg" alt="one of fairchild's standing 1906 cherry trees">
                     </li> -->
                     </ul> 
+            <!-- End of Panel One -->
+            </div>
 
+            <div class="background" id="panelTwo">
                     <h2>1907</h2>
                     <ul class="timeline-items">
                         <li class="is-hidden timeline-item"> <!-- Normal block, positionned to the left  -->
@@ -82,10 +108,14 @@
 
                     <h2>1909</h2>
                     <ul class="timeline-items">
-                        <li class="is-hidden timeline-item"> <!-- Normal block, positionned to the left  -->
-                            <p>Japanese chemist Jokichi Takamine and diplomat Koichi Mizuno suggest Tokyo donate the trees as a gesture of friendship between the U.S. and Japan. Helen Taft accepts the offer.</p>
+                        <li class="is-hidden timeline-item inverted"> <!-- Normal block, positionned to the left  -->
+                            <p>Japanese chemist Jokichi Takamine and diplomat Koichi Mizuno suggest Tokyo donate the trees as a gesture of friendship between the U.S. and Japan.</p>
                         </li>
                     </ul>
+            <!-- End of Panel Two -->
+            </div>
+        
+            <div class="background" id="panelThree">
                     <h2>1910</h2>
                     <ul class="timeline-items">
                         <li class="is-hidden timeline-item inverted"> <!-- Normal block, positionned to the right  -->
@@ -101,17 +131,19 @@
                             <p>Undaunted by the infected trees, diplomats arrange for a new donation, and 3,020 healthy trees arrive in Washington on March 26.</p>
                         </li>
                     </ul>
-
-                    <h2>1934</h2>
-                    <ul class="timeline-items">
-                        <li class="is-hidden timeline-item"> <!-- Normal block, positionned to the left  -->
-                            <p>The District of Columbia commissioners sponsor a three-day cherry blossom celebration.</p>
-                        </li>
-                    </ul>
-                <!-- End of layer -->
-                </div>
-            <!-- End of panelOne -->
+            <!-- End of Panel Three -->
             </div>
+
+            <div class="background" id="panelFour">
+                <h2>1934</h2>
+                <ul class="timeline-items">
+                    <li class="is-hidden timeline-item"> <!-- Normal block, positionned to the left  -->
+                        <p>The District of Columbia commissioners sponsor a three-day cherry blossom celebration.</p>
+                    </li>
+                </ul>
+            <!-- End of Panel Four     -->
+            </div>
+            
         <!-- End of timeline div -->
         </div>
     <!-- End of content div -->
@@ -129,13 +161,17 @@
     <!-- Quiz Portion -->
     <div id="quiz">
         <div id="quiz-header">
-            <h1>Basic Quiz Demo</h1>
+            <h1>Quiz Time</h1>
             <!-- Optionally add a home button -->
-            <p><a id="quiz-home-btn">Home</a></p>
+            <p><a id="quiz-home-btn">Test your knowledge!</a></p>
         </div>
         <div id="quiz-start-screen">
             <p><a href="#" id="quiz-start-btn" class="quiz-button">Start</a></p>
         </div>
+    </div>
+
+    <div id="results-screen">
+        
     </div>
                 
     <!-- JQuery -->
@@ -146,6 +182,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 
     <!-- JavaScript -->
+    <!-- <script src="plugins/bouncy-navigation-master/js/main.js"></script>
+    <script src="plugins/bouncy-navigation-master/js/modernizr.js"></script> -->
     <script src="plugins/jQuery-Plugin-For-Sakura-Petals-Falling-Animation-Sakura/jquery-sakura.js"></script>
     <script src="plugins/jquery-quiz-master/dist/jquery.quiz-min.js"></script>
     <script src="plugins/Simple-Animated-Timeline-Plugin-For-jQuery-Timelify/js/jquery.timelify.js"></script>
