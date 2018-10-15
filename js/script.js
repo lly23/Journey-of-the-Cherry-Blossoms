@@ -73,11 +73,7 @@ $(document).ready(function() {
     });
 
     $(window).scroll(function() {
-      // $('#title').animate({
-      //   scrollTop: $('#intro').offset().top
-      // }, 1000);
-
-      // fade when scrolling down
+      // title will fade when scrolling down
       var scrollTop = $(window).scrollTop();
       var height = $(window).height();
   
@@ -92,6 +88,7 @@ $(document).ready(function() {
         $('#listthree').removeClass('active');
         $('#listfour').removeClass('active');
         $('#listfive').removeClass('active');
+        $('#nav').css({'background': 'none', 'width': '0'});
       } 
 
       if ($(window).scrollTop() >= $('#intro').offset().top) {
@@ -100,10 +97,7 @@ $(document).ready(function() {
         $('#listthree').removeClass('active');
         $('#listfour').removeClass('active');
         $('#listfive').removeClass('active');
-        // $('html, body').animate({
-        //   scrollTop: $('#intro').offset().top
-        // }, 1000);
-        // $('#title').sakura('stop');
+        $('#nav').css({'background': '#FFF', 'width': '100%'});
       } 
 
       if ($(window).scrollTop() >= $('#content').offset().top) {
@@ -192,7 +186,6 @@ $(document).ready(function() {
       } else {
         $('#nine').removeClass('changed');
       }
-
     });
 
     // quiz plugin
