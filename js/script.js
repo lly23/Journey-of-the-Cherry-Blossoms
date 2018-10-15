@@ -8,10 +8,6 @@ $(document).ready(function() {
       offset: 150
     });
 
-    // parallax.js effect
-    var title = document.getElementById('title');
-    var parallaxInstance = new Parallax(title);
-
     // made a navigation menu that will take user to a certain section
     $('#listone').click(function() {
       $('#listone').addClass('active');
