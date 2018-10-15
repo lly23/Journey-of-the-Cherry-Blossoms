@@ -12,12 +12,6 @@ $(document).ready(function() {
     var title = document.getElementById('title');
     var parallaxInstance = new Parallax(title);
 
-    var content = document.getElementById('content');
-    var parallaxInstance = new Parallax(content);
-
-    var sources = document.getElementById('sources');
-    var parallaxInstance = new Parallax(sources);
-
     // made a navigation menu that will take user to a certain section
     $('#listone').click(function() {
       $('#listone').addClass('active');
