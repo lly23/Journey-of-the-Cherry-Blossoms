@@ -92,7 +92,13 @@ $(document).ready(function() {
   
       $('#title').css({
           'opacity': ((height - scrollTop) / height)
-      });    
+      }); 
+      
+      if ($(window).width() <= 600 && $(window).scrollTop() <= $('#title').height()) {
+        $('#title').css({
+            'opacity': 1
+        });
+      }
 
       // when scrolling, active sections will be highlighted with active class properties
       if ($(window).scrollTop() <= $('#title').height()) {
